@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>여철기 | 현대건설</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
         :root {
             --charcoal: #1a1a2e;
             --deep-navy: #16213e;
@@ -211,6 +209,7 @@
         .footer-bottom { padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); }
         .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; color: var(--bronze); font-weight: 700; letter-spacing: 3px; margin-bottom: 10px; }
         .footer-bottom p { font-size: 0.78rem; opacity: 0.3; }
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: var(--bronze); z-index: 9999; width: 0; transition: width 0.1s linear; }
         @media (max-width: 992px) {
             .hero-text h1 { font-size: 3.5rem; }
             .value-grid { grid-template-columns: 1fr; }
@@ -234,11 +233,11 @@
             .contact-grid { flex-direction: column; align-items: center; }
             .contact-item { width: 100%; max-width: 300px; }
         }
-        .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: var(--bronze); z-index: 9999; width: 0; transition: width 0.1s linear; }
     </style>
 </head>
 <body>
     <div class="scroll-progress" id="scrollProgress"></div>
+
     <header id="header">
         <div class="container">
             <nav>
@@ -254,6 +253,7 @@
             </nav>
         </div>
     </header>
+
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
@@ -274,6 +274,7 @@
             </div>
         </div>
     </section>
+
     <section id="about">
         <div class="container">
             <div class="section-header reveal">
@@ -301,6 +302,7 @@
             </div>
         </div>
     </section>
+
     <div class="expertise-banner reveal">
         <div class="container">
             <div class="expertise-inner">
@@ -317,6 +319,7 @@
             </div>
         </div>
     </div>
+
     <section id="career" class="career-section">
         <div class="container">
             <div class="section-header reveal">
@@ -325,7 +328,9 @@
                 <div class="line"></div>
             </div>
             <p class="career-intro reveal">현장에서 시작하여 다양한 부서를 거치며 <strong>약 30년간</strong><br><strong>시공, 영업, 구매, 해외사업, 경영지원</strong> 등<br>여러 분야에서 경험을 쌓아올 수 있었습니다.</p>
+
             <div class="timeline">
+                <!-- ① 현재 재직 -->
                 <div class="timeline-item reveal">
                     <div class="period">2025 —</div>
                     <div class="dot"></div>
@@ -336,20 +341,12 @@
                             <p>민간현장 지원업무 총괄</p>
                         </div>
                         <div class="current-block">
-                            <h4>디에이치 아델스타 <span class="badge-current">현 재직</span></h4>
+                            <h4>디에이치 아델스타 <span class="badge-current">겸직</span></h4>
                             <div class="role">지원1팀장</div>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item reveal">
-                    <div class="period">3년</div>
-                    <div class="dot"></div>
-                    <div class="content">
-                        <h4>비즈니스지원실 비즈니스지원팀</h4>
-                        <div class="role">팀장</div>
-                        <p>경영지원본부에서 본사 및 현장 업무지원 담당</p>
-                    </div>
-                </div>
+                <!-- ② 도시정비추진팀 -->
                 <div class="timeline-item reveal">
                     <div class="period">1.5년</div>
                     <div class="dot"></div>
@@ -359,6 +356,17 @@
                         <p>도시정비사업 추진 업무 담당</p>
                     </div>
                 </div>
+                <!-- ③ 비즈니스지원실 비즈니스지원팀 -->
+                <div class="timeline-item reveal">
+                    <div class="period">3년</div>
+                    <div class="dot"></div>
+                    <div class="content">
+                        <h4>비즈니스지원실 비즈니스지원팀</h4>
+                        <div class="role">팀장</div>
+                        <p>경영지원본부에서 본사 및 현장 업무지원 담당</p>
+                    </div>
+                </div>
+                <!-- ④ 지주택 / 재건축 / 데이터센터 -->
                 <div class="timeline-item reveal">
                     <div class="period">1년</div>
                     <div class="dot"></div>
@@ -368,6 +376,7 @@
                         <p>다양한 사업유형 현장의 지원업무 담당</p>
                     </div>
                 </div>
+                <!-- ⑤ 홍은2, 대곡소사 -->
                 <div class="timeline-item reveal">
                     <div class="period">3년</div>
                     <div class="dot"></div>
@@ -377,6 +386,7 @@
                         <p>현장 행정·관리 지원 담당</p>
                     </div>
                 </div>
+                <!-- ⑥ 삼호가든, 클래시안 -->
                 <div class="timeline-item reveal">
                     <div class="period">1년</div>
                     <div class="dot"></div>
@@ -385,6 +395,7 @@
                         <div class="role">관리책임자</div>
                     </div>
                 </div>
+                <!-- ⑦ 싱가포르 테콩 -->
                 <div class="timeline-item reveal">
                     <div class="period">2년</div>
                     <div class="dot"></div>
@@ -393,6 +404,7 @@
                         <div class="role">관리책임자</div>
                     </div>
                 </div>
+                <!-- ⑧ 채권관리팀 -->
                 <div class="timeline-item reveal">
                     <div class="period">2년</div>
                     <div class="dot"></div>
@@ -401,6 +413,7 @@
                         <div class="role">담당</div>
                     </div>
                 </div>
+                <!-- ⑨ UAE 합샨 -->
                 <div class="timeline-item reveal">
                     <div class="period">2년</div>
                     <div class="dot"></div>
@@ -409,6 +422,7 @@
                         <div class="role">총무파트장</div>
                     </div>
                 </div>
+                <!-- ⑩ 도시정비영업팀 -->
                 <div class="timeline-item reveal">
                     <div class="period">3년</div>
                     <div class="dot"></div>
@@ -417,6 +431,7 @@
                         <div class="role">영업담당</div>
                     </div>
                 </div>
+                <!-- ⑪ 구매팀 -->
                 <div class="timeline-item reveal">
                     <div class="period">2년</div>
                     <div class="dot"></div>
@@ -425,6 +440,7 @@
                         <div class="role">해외전기</div>
                     </div>
                 </div>
+                <!-- ⑫ 시공현장 -->
                 <div class="timeline-item reveal">
                     <div class="period">9년</div>
                     <div class="dot"></div>
@@ -437,6 +453,7 @@
             </div>
         </div>
     </section>
+
     <section id="credentials">
         <div class="container">
             <div class="section-header reveal">
@@ -494,19 +511,30 @@
             </div>
         </div>
     </section>
+
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <h2 class="serif">Contact</h2>
                 <p class="subtitle">업무 관련 문의사항이 있으시면 편하게 연락 주십시오.</p>
                 <div class="contact-grid">
-                    <div class="contact-item" onclick="copyText('chulkee.yeo@hdec.co.kr','tooltip-email')">
-                        <span class="copy-tooltip" id="tooltip-email">복사 완료!</span>
+                    <!-- 회사 이메일 -->
+                    <div class="contact-item" onclick="copyText('chulkee.yeo@hdec.co.kr','tooltip-email-work')">
+                        <span class="copy-tooltip" id="tooltip-email-work">복사 완료!</span>
                         <span class="c-icon">✉</span>
-                        <h4>Email</h4>
+                        <h4>Work Email</h4>
                         <p>chulkee.yeo@hdec.co.kr</p>
                         <p class="sub">클릭하여 복사</p>
                     </div>
+                    <!-- 개인 이메일 -->
+                    <div class="contact-item" onclick="copyText('charlie0909@hanmail.net','tooltip-email-personal')">
+                        <span class="copy-tooltip" id="tooltip-email-personal">복사 완료!</span>
+                        <span class="c-icon">✉</span>
+                        <h4>Personal Email</h4>
+                        <p>charlie0909@hanmail.net</p>
+                        <p class="sub">클릭하여 복사</p>
+                    </div>
+                    <!-- 휴대폰 -->
                     <div class="contact-item" onclick="copyText('010-8743-5580','tooltip-mobile')">
                         <span class="copy-tooltip" id="tooltip-mobile">복사 완료!</span>
                         <span class="c-icon">☎</span>
@@ -514,6 +542,7 @@
                         <p>010-8743-5580</p>
                         <p class="sub">클릭하여 복사</p>
                     </div>
+                    <!-- 사무실 전화 -->
                     <div class="contact-item" onclick="copyText('02-746-1220','tooltip-office')">
                         <span class="copy-tooltip" id="tooltip-office">복사 완료!</span>
                         <span class="c-icon">☏</span>
@@ -521,6 +550,7 @@
                         <p>02-746-1220</p>
                         <p class="sub">클릭하여 복사</p>
                     </div>
+                    <!-- 프로필 링크 -->
                     <div class="contact-item" onclick="copyText(window.location.href,'tooltip-link')">
                         <span class="copy-tooltip" id="tooltip-link">링크 복사 완료!</span>
                         <span class="c-icon">⧉</span>
@@ -537,50 +567,121 @@
             </div>
         </div>
     </footer>
+
     <script>
-        var typingText=document.getElementById('typing-text');
-        var phrases=["수주에서 준공까지, 사업의 흐름을 아는 사람","건축주택 · 도시정비 · 민간사업 전문가","현장과 본사를 잇는 든든한 지원군"];
-        var phraseIndex=0,charIndex=0,isDeleting=false,typeSpeed=120;
-        function type(){
-            var cur=phrases[phraseIndex];
-            if(isDeleting){typingText.textContent=cur.substring(0,charIndex-1);charIndex--;typeSpeed=40;}
-            else{typingText.textContent=cur.substring(0,charIndex+1);charIndex++;typeSpeed=120;}
-            if(!isDeleting&&charIndex===cur.length){isDeleting=true;typeSpeed=3000;}
-            else if(isDeleting&&charIndex===0){isDeleting=false;phraseIndex=(phraseIndex+1)%phrases.length;typeSpeed=600;}
-            setTimeout(type,typeSpeed);
+        /* ── 다크모드 기본 시작 ── */
+        var themeToggle = document.getElementById('theme-toggle');
+        var isDark = true;
+        document.body.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = 'LIGHT';
+
+        themeToggle.addEventListener('click', function() {
+            isDark = !isDark;
+            document.body.setAttribute('data-theme', isDark ? 'dark' : '');
+            themeToggle.textContent = isDark ? 'LIGHT' : 'DARK';
+        });
+
+        /* ── 타이핑 애니메이션 ── */
+        var typingText = document.getElementById('typing-text');
+        var phrases = [
+            "수주에서 준공까지, 사업의 흐름을 아는 사람",
+            "건축주택 · 도시정비 · 민간사업 전문가",
+            "현장과 본사를 잇는 든든한 지원군"
+        ];
+        var phraseIndex = 0, charIndex = 0, isDeleting = false, typeSpeed = 120;
+
+        function type() {
+            var cur = phrases[phraseIndex];
+            if (isDeleting) {
+                typingText.textContent = cur.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 40;
+            } else {
+                typingText.textContent = cur.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 120;
+            }
+            if (!isDeleting && charIndex === cur.length) {
+                isDeleting = true;
+                typeSpeed = 3000;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 600;
+            }
+            setTimeout(type, typeSpeed);
         }
-        function copyText(text,tooltipId){
-            navigator.clipboard.writeText(text).then(function(){showTooltip(tooltipId);}).catch(function(){
-                var ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showTooltip(tooltipId);
+        type();
+
+        /* ── 복사 기능 ── */
+        function copyText(text, tooltipId) {
+            navigator.clipboard.writeText(text).then(function() {
+                showTooltip(tooltipId);
+            }).catch(function() {
+                var ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showTooltip(tooltipId);
             });
         }
-        function showTooltip(id){var t=document.getElementById(id);t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2000);}
-        var observer=new IntersectionObserver(function(entries){
-            entries.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('active');},i*100);}});
-        },{threshold:0.1});
-        document.querySelectorAll('.reveal').forEach(function(el){observer.observe(el);});
-        var header=document.getElementById('header');
-        var navLinks=document.querySelectorAll('.nav-links a');
-        var scrollProgress=document.getElementById('scrollProgress');
-        window.addEventListener('scroll',function(){
-            header.classList.toggle('sticky',window.scrollY>80);
-            var current='';
-            document.querySelectorAll('section,footer').forEach(function(s){if(pageYOffset>=s.offsetTop-250)current=s.getAttribute('id');});
-            navLinks.forEach(function(l){l.classList.remove('active');if(l.getAttribute('href').includes(current))l.classList.add('active');});
-            var winScroll=document.body.scrollTop||document.documentElement.scrollTop;
-            var height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
-            scrollProgress.style.width=(winScroll/height)*100+'%';
+
+        function showTooltip(id) {
+            var el = document.getElementById(id);
+            el.classList.add('show');
+            setTimeout(function() { el.classList.remove('show'); }, 2000);
+        }
+
+        /* ── 스크롤 프로그레스 바 ── */
+        window.addEventListener('scroll', function() {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var progress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = progress + '%';
         });
-        var themeToggle=document.getElementById('theme-toggle');
-        var isDark=true;
-        document.body.setAttribute('data-theme','dark');
-        themeToggle.textContent='LIGHT';
-        themeToggle.addEventListener('click',function(){
-            isDark=!isDark;
-            document.body.setAttribute('data-theme',isDark?'dark':'light');
-            themeToggle.textContent=isDark?'LIGHT':'DARK';
+
+        /* ── 스티키 헤더 ── */
+        var header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
         });
-        document.addEventListener('DOMContentLoaded',type);
+
+        /* ── 네비게이션 활성화 ── */
+        var sections = document.querySelectorAll('section, .hero');
+        var navLinks = document.querySelectorAll('.nav-links a');
+        window.addEventListener('scroll', function() {
+            var scrollPos = window.scrollY + 200;
+            sections.forEach(function(sec) {
+                if (scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
+                    var id = sec.getAttribute('id');
+                    navLinks.forEach(function(link) {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+
+        /* ── 스크롤 reveal 애니메이션 ── */
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(function(el) {
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>
